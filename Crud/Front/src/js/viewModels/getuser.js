@@ -7,18 +7,28 @@ define([
 
     var self = this;
 
-    self.users = ko.observableArray([])
+    self.users = ko.observableArray([]);
+    self.allUserData = ko.observableArray([])
+
 
     self.connected = function(){
-      apiService().res
+      apiService().getUsers()
       .then(function(res){
         console.log(res);
-        self.users(res  )
-
-      }).catch(function(err){
+        self.users(res);
+        self.allUserData(res)
+      })
+      .catch(function(err){
         console.log(err); 
       });
-    }
+    };
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+      document.getElementById('btnGetUsers').addEventListener('click', self.connected());
+      console.log(self.allUserData());
+
+    })
 
 
   }

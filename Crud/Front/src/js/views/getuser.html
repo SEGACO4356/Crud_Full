@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>
-  
-  <main class="main">
-    <div data-bind="foreach: users">
 
+<body>
+
+  <main class="main"
+    style="height: 100%; width: 100%;">
+    <div id="userList" data-bind="foreach: users" 
+      style="width: fit-content; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow-x: scroll; width: 100%; height: fit-content;">
+      <div class="containerUsers"
+           style="display:flex; justify-content: center; align-items: center; flex-direction: row;">
+        <div class="containerSon"
+            style="background-color: whitesmoke; height: 8rem; width: 15rem; margin: 2rem; display: flex; flex-direction: column; border-radius: 10px; box-shadow: 0px 1px 10px;">
+          <p data-bind="text: id"
+            style="padding-left: 0.5rem; padding-top: 0.5rem;"></p>
+          <p data-bind="text: username"
+            style="padding-left: 0.5rem;"></p>
+          <p data-bind="text: useremail"
+            style="padding-left: 0.5rem;"></p>
+        </div>
+      </div>
     </div>
   </main>
 
+  <script src="getuser.js"></script>
+
 </body>
+
 </html>
