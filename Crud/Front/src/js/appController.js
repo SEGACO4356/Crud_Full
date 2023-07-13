@@ -49,7 +49,7 @@ define(['knockout', 'ojs/ojmodule-element-utils', 'ojs/ojknockouttemplateutils',
        self.router = Router.rootInstance;
        self.router.configure({
          'getuser': {label: 'Get User', isDefault: true},
-         'incidents': {label: 'Incidents'},
+         'createuser': {label: 'Create User'},
          'customers': {label: 'Customers'},
          'about': {label: 'About'}
        });
@@ -69,7 +69,7 @@ define(['knockout', 'ojs/ojmodule-element-utils', 'ojs/ojknockouttemplateutils',
       var navData = [
       {name: 'Get user', id: 'getuser',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'},
-      {name: 'Incidents', id: 'incidents',
+      {name: 'Create User', id: 'createuser',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24'},
       {name: 'Customers', id: 'customers',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'},

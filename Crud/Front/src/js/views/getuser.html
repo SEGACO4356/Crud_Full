@@ -12,6 +12,15 @@
 
   <main class="main"
     style="height: 100%; width: 100%;">
+    <div>
+    <p
+      style="font-size: 1.5rem;">En este lugar se encuentran los usuarios que se han creado</p>
+
+    <a
+    href="/?root=createuser">Puedes crear usuarios aquí</a> 
+
+    </div>
+
     <div id="userList" data-bind="foreach: users" 
       style="width: fit-content; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow-x: scroll; width: 100%; height: fit-content;">
       <div class="containerUsers"
@@ -29,7 +38,7 @@
     </div>
   </main>
 
-  <script src="getuser.js"></script>
+  <script src="../viewModels/getuser.js"></script>
 
 </body>
 
